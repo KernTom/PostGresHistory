@@ -1,6 +1,6 @@
 CREATE TABLE public.history
 (
-    oid bigint NOT NULL DEFAULT nextval('"GENERALS"."SEQ.CHANGELOG.History"'::regclass),
+    oid bigserial,
     table_name character varying(120) COLLATE pg_catalog."default" NOT NULL,
     column_name character varying(120) COLLATE pg_catalog."default" NOT NULL,
     timestamp timestamp with time zone NOT NULL DEFAULT clock_timestamp(),
