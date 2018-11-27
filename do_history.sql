@@ -81,5 +81,3 @@ END;
 
 $BODY$;
 
-ALTER FUNCTION public.do_history()
-    OWNER TO rtk_usr;
