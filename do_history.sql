@@ -70,7 +70,7 @@ BEGIN
 
     ELSIF (TG_OP = 'DELETE') THEN
        
-        INSERT INTO "GENERALS"."TBL.CHANGELOG.History" ( operation,table_oid, table_name, column_oid, column_name, ordinal_position_of_column, old_value, new_value, application_user )
+        INSERT INTO public.history ( operation,table_oid, table_name, column_oid, column_name, ordinal_position_of_column, old_value, new_value, application_user )
         VALUES ( TG_OP, TG_RELID, TG_TABLE_NAME, OLD.oid, ''::VARCHAR, 0, ''::VARCHAR, ''::VARCHAR, userID::bigint );
         RETURN OLD;
        
